@@ -1,0 +1,5 @@
+### 学生考勤打卡 POST 接口
+POST http://localhost:8080/student/attendance
+Content-Type: application/x-www-form-urlencoded
+
+studentId=42411157
