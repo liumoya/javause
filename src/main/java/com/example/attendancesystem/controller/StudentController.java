@@ -1,7 +1,8 @@
 package com.example.attendancesystem.controller;
-
 import com.example.attendancesystem.entity.Student;
+import com.example.attendancesystem.service.StudentService;
 import com.example.attendancesystem.utils.Result;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;

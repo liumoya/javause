@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class Student {
-    private String id;        // 学号
+    private String id;
+    private String studentNo;  // 学号
     private String name;      // 姓名
     private String classname; // 班级
     private Integer age;      // 年龄
