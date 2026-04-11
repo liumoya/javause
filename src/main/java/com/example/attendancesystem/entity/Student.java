@@ -2,6 +2,7 @@ package com.example.attendancesystem.entity;
 
 import lombok.Data;
 
+
 @Data
 public class Student {
     private String id;

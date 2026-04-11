@@ -1,0 +1,76 @@
+### 1. 测试 hello 接口
+GET http://localhost:8081/hello
+
+### 2. 测试 about 接口
+GET http://localhost:8081/about
+
+### 3. 查询所有用户
+GET http://localhost:8081/api/test/all
+
+### 4. 根据ID查询用户
+GET http://localhost:8081/api/test/id/1
+
+### 5. 查询所有学生
+GET http://localhost:8081/api/test/role/student
+
+### 6. 查询所有教师
+GET http://localhost:8081/api/test/role/teacher
+
+### 7. 统计人数
+GET http://localhost:8081/api/test/count
+
+### 8. 分页查询（第1页，每页5条）
+GET http://localhost:8081/api/test/page?page=0&size=5
+
+
+### 9. 登录验证（admin）
+POST http://localhost:8081/api/test/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+### 10. 登录验证（学生）
+POST http://localhost:8081/api/test/login
+Content-Type: application/json
+
+{
+  "username": "student001",
+  "password": "123456"
+}
+
+### 11. 添加新用户
+POST http://localhost:8081/api/test/add
+Content-Type: application/json
+
+{
+  "username": "test001",
+  "password": "123456",
+  "realName": "测试学生",
+  "role": "student",
+  "studentNo": "20240099",
+  "className": "计算机3班",
+  "phone": "13800123999",
+  "email": "test@school.com",
+  "status": 1
+}
+
+### 12. 更新用户
+PUT http://localhost:8081/api/test/update/1
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456",
+  "realName": "系统管理员",
+  "role": "admin",
+  "status": 1
+}
+
+### 13. 软删除用户
+DELETE http://localhost:8081/api/test/soft/10
+
+### 14. 物理删除用户（慎用）
+DELETE http://localhost:8081/api/test/physical/10
