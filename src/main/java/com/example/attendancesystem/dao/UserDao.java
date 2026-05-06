@@ -1,10 +1,13 @@
 package com.example.attendancesystem.dao;
 
 import com.example.attendancesystem.entity.User;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 // 删除 @Repository 和 @Autowired
 // interface 不需要这些注解
+@Repository
 public interface UserDao {
 
     // 添加用户
@@ -60,4 +63,7 @@ public interface UserDao {
 
     // 批量更新状态
     int batchUpdateStatus(List<Integer> ids, Integer status);
+
+    User findByName(String username);
+
 }

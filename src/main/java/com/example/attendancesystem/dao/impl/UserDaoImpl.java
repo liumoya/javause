@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -140,6 +139,21 @@ public class UserDaoImpl implements UserDao {
             return null;
         }
     }
+
+
+
+    // ========== 在这里添加 findByName 方法 ↓↓↓ ==========
+    @Override
+    public User findByName(String username) {
+        String sql = "SELECT * FROM [user] WHERE username = ?";
+        try {
+            return jdbcTemplate.queryForObject(sql, userRowMapper, username);
+        } catch (Exception e) {
+            System.out.println("根据用户名查询用户失败: " + e.getMessage());
+            return null;
+        }
+    }
+
 
     @Override
     public User getUserByStudentNo(String studentNo) {
