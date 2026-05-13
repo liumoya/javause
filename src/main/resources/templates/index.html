@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>班级考勤管理系统</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">班级考勤管理系统</div>
+    <div class="nav-links">
+        <span>欢迎，<span th:text="${username}">用户</span></span>
+        <a th:href="@{/logout}">退出登录</a>
+    </div>
+</div>
+
+<div class="dashboard-container" style="margin-top: 100px;">
+    <h1>欢迎来到班级考勤管理系统</h1>
+    <p>你好，<span th:text="${username}">用户</span>！</p>
+
+    <div class="menu">
+        <a th:href="@{/student/classes}">📋 查看班级列表</a>
+        <a th:href="@{/student/page?page=0&size=5}">📄 分页查询学生</a>
+        <a th:href="@{/student/list}">📊 学生列表</a>
+        <a th:href="@{/student/courses}">📚 课程列表</a>
+    </div>
+</div>
+</body>
+</html>

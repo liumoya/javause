@@ -17,8 +17,8 @@ public class AttendanceSystemApplication {
         SpringApplication.run(AttendanceSystemApplication.class, args);
     }
 
-    // ========== 添加首页 ==========
-    @GetMapping("/")
+    // ========== 添加首页（暂时注释，因为要用PageController  ==========
+   /* @GetMapping("/")
     public String home() {
         return "<!DOCTYPE html>" +
                 "<html>" +
@@ -38,6 +38,8 @@ public class AttendanceSystemApplication {
                 "</body>" +
                 "</html>";
     }
+
+    */
 
     // 获取当前登录用户（可选）
     private String getCurrentUser() {
